@@ -22,7 +22,7 @@
         }
         h2 {
             text-align: center;
-            color: #5a2d82;  /* Purple color for the title */
+            color: #5a2d82;
             margin-bottom: 20px;
         }
         form {
@@ -40,13 +40,13 @@
         }
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #5a2d82;  /* Purple color for focused inputs */
+            border-color: #5a2d82;
             box-shadow: 0 0 5px rgba(90, 45, 130, 0.5);
         }
         button {
             padding: 15px;
             font-size: 16px;
-            background-color: #5a2d82;  /* Purple color for the button */
+            background-color: #5a2d82;
             color: white;
             border: none;
             border-radius: 5px;
@@ -54,19 +54,12 @@
             transition: background-color 0.3s ease;
         }
         button:hover {
-            background-color: #4e2670;  /* Darker purple on hover */
+            background-color: #4e2670;
         }
         label {
             font-weight: bold;
             margin-bottom: 5px;
-            color: #5a2d82;  /* Purple color for labels */
-        }
-        .thank-you-message {
-            display: none;
-            text-align: center;
-            font-size: 18px;
             color: #5a2d82;
-            margin-top: 20px;
         }
     </style>
 </head>
@@ -107,16 +100,13 @@
 
             <button type="submit">Envoyer la Candidature</button>
         </form>
-        <div class="thank-you-message" id="thankYouMessage">
-            Merci pour votre participation ! 😎
-        </div>
     </div>
 
     <script>
-        // JavaScript to show thank you message on form submission
+        // JavaScript to redirect to another page on form submission
         document.getElementById("candidatureForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent form from submitting normally
-            document.getElementById("thankYouMessage").style.display = "block"; // Show thank you message
+            window.location.href = "merci.html"; // Redirect to merci.html
         });
     </script>
 </body>
